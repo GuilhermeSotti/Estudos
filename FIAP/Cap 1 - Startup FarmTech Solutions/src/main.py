@@ -1,5 +1,3 @@
-import setup_imports
-
 def main():
     print("Hello, world!")
 
