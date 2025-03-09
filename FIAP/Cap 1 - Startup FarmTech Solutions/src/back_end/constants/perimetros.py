@@ -44,8 +44,6 @@ class Perimetro(Enum):
             return area_pentagono(*args)
         elif self == Perimetro.HEXAGONO:
             return area_hexagono(*args)
-        else:
-            raise ValueError("Perímetro desconhecido")
 
     def calcular_perimetro(self, distancia):
         return self.lados * distancia

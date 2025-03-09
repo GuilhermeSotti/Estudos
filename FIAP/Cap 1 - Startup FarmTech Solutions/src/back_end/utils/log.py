@@ -1,4 +1,3 @@
-import os
 import time
 import datetime
 import socket
@@ -22,27 +21,20 @@ def log_execution(log_message):
 
             execution_time = end_time - start_time
             
-            log_dir = os.path.join(str(start_datetime.year), str(start_datetime.month), str(start_datetime.day))
-            os.makedirs(log_dir, exist_ok=True)
-            
             machine_name = socket.gethostname()
-            user_name = getpass.getuser()
-            
-            log_filename = f"Log-{machine_name}_{user_name}_{start_datetime.strftime('%Y-%m-%d')}.txt"
-            log_filepath = os.path.join(log_dir, log_filename)
+            user_name = getpass.getuser()            
             
             log_entry = (
                 f"Class: {func.__qualname__.split('.')[0]}\n"
                 f"Function: {func.__name__}\n"
                 f"Message: {log_message}\n"
+                f"Machine: {machine_name}\n"
+                f"User: {user_name}\n"
                 f"Start Time: {start_str}\n"
                 f"End Time: {end_str}\n"
                 f"Execution Time: {execution_time:.2f} seconds\n"
                 "----------------------------------------\n"
             )
-            
-            with open(log_filepath, 'a') as log_file:
-                log_file.write(log_entry)
             
             print(log_entry)
             

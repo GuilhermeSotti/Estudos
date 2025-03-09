@@ -1,0 +1,20 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    <h2>Resposta da API</h2>
+    
+    {% if mensagem %}
+        <p><strong>Mensagem:</strong> {{ mensagem }}</p>
+    {% endif %}
+
+    {% if erro %}
+        <p style="color: red;"><strong>Erro:</strong> {{ erro }}</p>
+    {% endif %}
+
+    {% if dados %}
+        <h3>Dados do Plantio Cadastrado:</h3>
+        <pre>{{ dados | tojson(indent=4) }}</pre>
+    {% endif %}
+
+    <a href="{{ url_for('plantio.formulario') }}">Cadastrar outro plantio</a>
+{% endblock %}
