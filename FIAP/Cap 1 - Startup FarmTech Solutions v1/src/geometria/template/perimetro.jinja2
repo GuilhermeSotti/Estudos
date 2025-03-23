@@ -1,0 +1,24 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    <h2>Calcular Área de um {{ forma | capitalize }}</h2>
+
+    <form method="POST">
+        {% if forma == "quadrado" or forma == "pentagono" or forma == "hexagono" %}
+            <label for="lado">Lado:</label>
+            <input type="number" name="valores" step="any" required>
+        
+        {% elif forma == "retangulo" or forma == "triangulo" %}
+            <label for="base">Base:</label>
+            <input type="number" name="valores" step="any" required>
+            <label for="altura">Altura:</label>
+            <input type="number" name="valores" step="any" required>
+        
+        {% elif forma == "circulo" %}
+            <label for="raio">Raio:</label>
+            <input type="number" name="valores" step="any" required>
+        {% endif %}
+
+        <button type="submit">Calcular</button>
+    </form>
+{% endblock %}
