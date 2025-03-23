@@ -1,4 +1,5 @@
 from src.back_end import calculations, repository, models
+import json
 
 def menu():
     while True:
@@ -21,10 +22,10 @@ def menu():
         elif opcao == '4':
             deletar_dados()
         elif opcao == '5':
-            print("Encerrando o programa... Até mais!")
+            print("Encerrando programa.")
             break
         else:
-            print("Opção inválida. Tente novamente.")
+            print("Opção inválida.")
 
 def entrada_dados():
     print("\n--- Entrada de Dados ---")
@@ -71,25 +72,25 @@ def exibir_dados():
     if not registros:
         print("Nenhum registro encontrado.")
     else:
-        for i, registro in enumerate(registros):
+        for i, registro in  enumerate(registros):
             print(f"\nRegistro [{i}]:")
-            print(f"  Cultura: {registro.nome}")
-            print(f"  Formato: {registro.formato}")
-            if registro.nome == "Café":
-                print(f"  Dimensões: Comprimento = {registro.dimensoes['comprimento']} m, Largura = {registro.dimensoes['largura']} m")
+            print(f"  Cultura: {registro['cultura']}")
+            print(f"  Formato: {registro['formato']}")
+            if registro['cultura'] == "Café":
+                print(f"  Dimensões: Comprimento = {registro['dimensoes']['comprimento']} m, Largura = {registro['dimensoes']['largura']} m")
             else:
-                print(f"  Dimensões: Raio = {registro.dimensoes['raio']} m")
-            print(f"  Área: {registro.area:.2f} m²")
-            insumo = registro.insumo
+                print(f"  Dimensões: Raio = {registro['dimensoes']['raio']} m")
+            print(f"  Área: {registro['area']:.2f} m²")
+            insumo = registro['insumo']
             print("  Insumo:")
-            print(f"    Produto: {insumo.produto}")
-            if registro.nome == "Café":
-                print(f"    Dose: {insumo.dose} g/m²")
+            print(f"    Produto: {insumo['produto']}")
+            if registro['cultura'] == "Café":
+                print(f"    Dose: {insumo['dose']} g/m²")
             else:
-                print(f"    Número de ruas: {insumo.extras.get('num_ruas')}")
-                print(f"    Comprimento médio: {insumo.extras.get('comprimento_medio')} m")
-                print(f"    Taxa: {insumo.dose} mL/m")
-            print(f"    Quantidade necessária: {insumo.quantidade:.2f} {'gramas' if registro.nome=='Café' else 'litros'}")
+                print(f"    Número de ruas: {insumo['extras']['num_ruas']}")
+                print(f"    Comprimento médio: {insumo['extras']['comprimento_medio']} m")
+                print(f"    Taxa: {insumo['dose']} mL/m")
+            print(f"    Quantidade necessária: {insumo['quantidade']:.2f} {'gramas' if registro['cultura']=='Café' else 'litros'}")
 
 def atualizar_dados():
     print("\n--- Atualização de Dados ---")
@@ -103,7 +104,6 @@ def atualizar_dados():
             print("Índice inválido.")
             return
         print("Insira os novos dados para este registro:")
-        # Simplesmente removemos o registro antigo e chamamos a entrada de dados
         repository.deletar_registro(indice)
         entrada_dados()
         print("Registro atualizado com sucesso!")
@@ -111,7 +111,7 @@ def atualizar_dados():
         print("Entrada inválida.")
 
 def deletar_dados():
-    print("\n--- Deleção de Dados ---")
+    print("\n--- Deletar cultura ---")
     registros = repository.listar_registros()
     if not registros:
         print("Nenhum registro para deletar.")

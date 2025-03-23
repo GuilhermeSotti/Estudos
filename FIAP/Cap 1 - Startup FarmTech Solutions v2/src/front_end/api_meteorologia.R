@@ -1,10 +1,9 @@
 library(httr)
 library(jsonlite)
 
-consultar_api_meteorologia <- function(cidade = "Sao Paulo", api_key) {
-  url <- paste0("http://api.openweathermap.org/data/2.5/weather?q=", cidade,
+consultar_api_meteorologia <- function(cidade_html = "Sao%20Paulo", cidade = "Sao Paulo", api_key) {
+  url <- paste0("http://api.openweathermap.org/data/2.5/weather?q=", cidade_html,
                 "&appid=", api_key, "&units=metric", "&lang=pt_br")
-  
   resposta <- GET(url)
   
   if (resposta$status_code == 200) {
@@ -13,10 +12,8 @@ consultar_api_meteorologia <- function(cidade = "Sao Paulo", api_key) {
     cat("Temperatura: ", dados$main$temp, "°C\n")
     cat("Sensação Térmica: ", dados$main$feels_like, "°C\n")
     cat("Umidade: ", dados$main$humidity, "%\n")
-    cat("Condição: ", dados$weather[[1]]$description, "\n")
+    cat("Condição: ", dados$weather$description, "\n")
   } else {
-    cat("Falha ao obter dados meteorológicos. Verifique a conexão ou a API key.\n")
+    cat("Falha ao obter dados meteorológicos.\n")
   }
 }
-
-consultar_api_meteorologia(cidade = "Sao Paulo", api_key = "YOUR_API_KEY")
