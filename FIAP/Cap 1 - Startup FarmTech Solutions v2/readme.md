@@ -63,7 +63,7 @@ A **FarmTech Solutions** fechou um contrato com uma fazenda que busca inovação
 4️⃣ Execute a análise estatística em R:
 
 ```r
- source("analise.R")
+ source("main_analysis.R")
 ```
 
 ## 📊 Análise Estatística com R
