@@ -1,0 +1,16 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    <h2>Resultado</h2>
+
+    {% if erro %}
+        <p style="color: red;"><strong>Erro:</strong> {{ erro }}</p>
+    {% else %}
+        <p><strong>Tipo:</strong> {{ tipo }}</p>
+        <p><strong>Forma:</strong> {{ forma }}</p>
+        <p><strong>Resultado:</strong> {{ resultado | round(2) }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('geometria.area', forma=forma.lower()) }}">Calcular outra área</a> |
+    <a href="/">Voltar ao início</a>
+{% endblock %}

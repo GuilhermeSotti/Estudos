@@ -1,0 +1,23 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}Previsão do Tempo{% endblock %}
+
+{% block content %}
+    <h1>Clima em {{ city }}</h1>
+
+    <form method="get">
+        <input type="text" name="city" placeholder="Digite a cidade" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if weather %}
+        <div class="weather-card">
+            <p><strong>Temperatura:</strong> {{ weather['main']['temp'] }}°C</p>
+            <p><strong>Condição:</strong> {{ weather['weather'][0]['description'] | capitalize }}</p>
+            <p><strong>Umidade:</strong> {{ weather['main']['humidity'] }}%</p>
+            <p><strong>Vento:</strong> {{ weather['wind']['speed'] }} km/h</p>
+        </div>
+    {% else %}
+        <p>Erro ao buscar a previsão. Tente novamente.</p>
+    {% endif %}
+{% endblock %}

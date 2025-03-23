@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="max-image-preview:large">
+    <meta name="application-name" content="Cap 1 - Startup FarmTech Solutions">
+    <meta name="msapplication-window" content="width=device-width;height=device-height">
+    <meta name="msapplication-tooltip" content="Cap 1">
+    <meta name="description" content="Cap 1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={{ title }}>
+    <meta property="og:description" content="Cap 1">
+    <meta property="og:url" content="Cap 1 - Startup FarmTech Solutions">
+    <meta property="og:site_name" content="guilhermesotti">
+    <meta property="og:image:alt" content="">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/Logo.svg" sizes="16x16 24x24 32x32 48x48">
+    <title> Cap 1 - Startup FarmTech Solutions </title>
+    <link href="{{ url_for('static', filename='dist/css/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+</head>
+<body class="{{ template }}">
+  {% block content %}{% endblock %}
+</body>
+</html>

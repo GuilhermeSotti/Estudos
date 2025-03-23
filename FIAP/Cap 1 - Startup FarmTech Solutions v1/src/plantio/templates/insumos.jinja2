@@ -1,0 +1,12 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    <h2>Insumos do Plantio</h2>
+    <div class="insumos">
+        {% if insumos %}
+            <p><strong>Custo dos Insumos:</strong> R$ {{ insumos }}</p>
+        {% else %}
+            <p>Nenhum dado de insumos encontrado.</p>
+        {% endif %}
+    </div>
+{% endblock %}

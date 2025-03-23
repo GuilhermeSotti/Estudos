@@ -1,0 +1,35 @@
+[
+    {
+        "cultura": "Soja",
+        "formato": "Circular",
+        "dimensoes": {
+            "raio": 20.0
+        },
+        "area": 1256.64,
+        "insumo": {
+            "produto": "Pulverizador",
+            "dose": 3.0,
+            "quantidade": 4000.56,
+            "extras": {
+                "num_ruas": 4,
+                "comprimento_medio": 100.0,
+                "taxa": 500
+            }
+        }
+    },
+    {
+        "cultura": "Café",
+        "formato": "Retangular",
+        "dimensoes": {
+            "comprimento": 23.0,
+            "largura": 2.0
+        },
+        "area": 46.0,
+        "insumo": {
+            "produto": "Fosfato",
+            "dose": 3.0,
+            "quantidade": 138.0,
+            "extras": null
+        }
+    }
+]

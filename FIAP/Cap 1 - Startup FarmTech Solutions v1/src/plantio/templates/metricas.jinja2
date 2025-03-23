@@ -1,0 +1,16 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+    <h2>Métricas do Plantio</h2>
+    <div class="metricas">
+        {% if metricas %}
+            <ul>
+                {% for key, value in metricas.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma métrica encontrada.</p>
+        {% endif %}
+    </div>
+{% endblock %}

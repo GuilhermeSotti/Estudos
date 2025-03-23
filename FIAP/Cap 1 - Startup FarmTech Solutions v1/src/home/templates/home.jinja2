@@ -1,0 +1,27 @@
+{% extends "layout.jinja2" %}
+
+{% block pagestyles %}
+  {% assets "home_style_bundle" %}
+    <link href="{{ ASSET_URL }}" rel="stylesheet" type="text/css">
+  {% endassets %}
+{% endblock %}
+
+{% block content %}
+  {% include "navigation.jinja2" %}
+
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+
+
+    <div class="culturas">
+      {% for cultura in culturas %}
+        <a href="/culturas/{{ loop.index - 1 }}/" class="product-preview">
+          <div class="name">{{ cultura.name }}</div>
+          <div class="price">${{ cultura.tipo }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
