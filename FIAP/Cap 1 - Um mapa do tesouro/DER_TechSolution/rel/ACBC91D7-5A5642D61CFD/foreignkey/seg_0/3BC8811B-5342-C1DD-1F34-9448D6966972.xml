@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3BC8811B-5342-C1DD-1F34-9448D6966972" containerWithKeyObject="B2B92EC9-F9AD-356A-33C1-1CFF058FDA7E" localFKIndex="87992540-7FEB-B710-6F0A-BC25E585368D" name="TABLE_24_Insumo_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<referredTableLongName>Config.Insumo</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>623280BB-4882-8C59-DA35-3E7EDAB3636B</referredTableID>
+<keyObject>BC7AF346-DE2D-7910-2C0E-4A2F3E08007B</keyObject>
+<referredKeyID>BC7AF346-DE2D-7910-2C0E-4A2F3E08007B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>insumo_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

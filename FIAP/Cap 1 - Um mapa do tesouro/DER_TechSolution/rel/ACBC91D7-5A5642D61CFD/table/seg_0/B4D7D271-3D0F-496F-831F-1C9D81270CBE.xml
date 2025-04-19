@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B4D7D271-3D0F-496F-831F-1C9D81270CBE" schemaObject="7C0CC20B-BDFB-BC6D-E909-636A2D9BBE7D" name="Cultura">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:07:57 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cultura_id" id="6BEB1E8A-FC9F-7AE7-4754-8CBD0AE7FC0F">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="66F91685-C72A-811A-9544-65A1422F67BB">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="FB0DFE29-5A09-6CB0-A758-8AEB0FD9892D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="plantacao_id" id="021A397B-B426-823B-27B5-5ABCC0BC57F3">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3EF7008-B783-DC05-CB8A-75CFCDD124C8" referredColumn="DB2536F9-2933-1ED4-A3D1-2D6927EDC63B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDC05DAC-C29F-F3EE-4F02-31B92AD4B7C3" name="Cultura_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BEB1E8A-FC9F-7AE7-4754-8CBD0AE7FC0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="695D0ECC-EC4E-AF9A-C819-F8993F68FD99" name="1:N → Cultura">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="021A397B-B426-823B-27B5-5ABCC0BC57F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

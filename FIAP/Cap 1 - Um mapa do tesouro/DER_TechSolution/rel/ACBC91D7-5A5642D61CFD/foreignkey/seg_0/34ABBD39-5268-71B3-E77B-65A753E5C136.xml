@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="34ABBD39-5268-71B3-E77B-65A753E5C136" containerWithKeyObject="EA0B9213-B5E8-8158-8735-96625F542DB8" localFKIndex="CB466B49-B526-7BE0-42FC-5F523401218D" name="Sensor_Tipo de Sensor_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:17:16 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<referredTableLongName>Monitoring.Tipo de Sensor</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6A9286B8-E287-BC26-5169-1F574EF7F070</referredTableID>
+<keyObject>C5CC06F5-DAB9-2222-41AA-F33AA7903556</keyObject>
+<referredKeyID>C5CC06F5-DAB9-2222-41AA-F33AA7903556</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tipo_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="1:N → Cultura" directorySegmentName="seg_0" id="EBF98A76-D377-D3D3-2500-BB0419A2780A">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:44:55 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<sourcePk>99FA2086-E8A5-BA73-25E9-0FF3739CD748</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F2046925-BD13-BF18-D495-C9A6202F3E94</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2B29227C-2F81-C155-F760-5F7219392620</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

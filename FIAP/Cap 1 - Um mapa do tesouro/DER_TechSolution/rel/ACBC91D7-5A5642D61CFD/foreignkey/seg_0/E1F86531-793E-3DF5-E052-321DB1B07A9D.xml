@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E1F86531-793E-3DF5-E052-321DB1B07A9D" containerWithKeyObject="B2B92EC9-F9AD-356A-33C1-1CFF058FDA7E" localFKIndex="6D9E5636-BAA8-5AE9-F9E8-ED6F6A3407AF" name="TABLE_24_Historico_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<referredTableLongName>Monitoring.Historico</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>11DDAB53-99EB-7718-6F33-AC928FAF4E55</referredTableID>
+<keyObject>62D719F9-88E4-4698-A18C-993BA41DA909</keyObject>
+<referredKeyID>62D719F9-88E4-4698-A18C-993BA41DA909</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>historico_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

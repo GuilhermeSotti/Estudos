@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3E00B6E6-DDFA-EBDD-68B1-8FFAB4AF1313" name="Produto">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:17:58 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="produtor_id" id="85A56D2D-0AC4-509E-812C-8F2A5E9A661D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:20:00 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="36BFB572-AEB3-B2C7-A5B5-3C6A626C9411">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:20:33 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="contato" id="1F92375D-9140-530D-436A-EF8940E5E942">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:21:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="endereco" id="7F488E74-F8FD-CD1C-21A5-25CC85645D65">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:22:13 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="45F1B729-5F57-2AAC-F943-25482300E265" name="Produto PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:20:21 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>85A56D2D-0AC4-509E-812C-8F2A5E9A661D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

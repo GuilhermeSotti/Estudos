@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A727610A-0D90-2A2D-F809-773D511BA2D7" schemaObject="7C0CC20B-BDFB-BC6D-E909-636A2D9BBE7D" name="Plantacao">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:02:38 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="plantacao_id" id="DB2536F9-2933-1ED4-A3D1-2D6927EDC63B">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="98DC4AD6-525A-8EBF-7C77-C5FF490FC49A">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lote" id="DE184EEC-4474-EF24-8D43-D3AC2AFD8072">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="area" id="EB58DA19-A8AF-0969-02C9-36CE7F611EC3">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="produtor_id" id="D6992A10-B9DD-15C9-7ACD-DFDF4E12BB25">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A33B48C-E7B7-1C78-9450-748E7B59E885" referredColumn="239040E6-0885-C92A-2F71-6117EAEA5FFD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6C4677B2-5EAD-BFDC-CC7C-C5B672C2395F" name="Plantacao_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB2536F9-2933-1ED4-A3D1-2D6927EDC63B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1AAA5BC1-FFFC-07A9-43A5-D6B42A46008B" name="1:N → Plantacao">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:05:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6992A10-B9DD-15C9-7ACD-DFDF4E12BB25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -31,5 +31,71 @@
             "quantidade": 138.0,
             "extras": null
         }
+    },
+    {
+        "cultura": "Café",
+        "formato": "Retangular",
+        "dimensoes": {
+            "comprimento": 23.0,
+            "largura": 4.0
+        },
+        "area": 92.0,
+        "insumo": {
+            "produto": "Fosfato",
+            "dose": 4.0,
+            "quantidade": 368.0,
+            "extras": null
+        }
+    },
+    {
+        "cultura": "Soja",
+        "formato": "Circular",
+        "dimensoes": {
+            "raio": 3.0
+        },
+        "area": 28.274333882308138,
+        "insumo": {
+            "produto": "Pulverizador",
+            "dose": 500,
+            "quantidade": 6.0,
+            "extras": {
+                "num_ruas": 4,
+                "comprimento_medio": 3.0,
+                "taxa": 500
+            }
+        }
+    },
+    {
+        "cultura": "Café",
+        "formato": "Retangular",
+        "dimensoes": {
+            "comprimento": 3.0,
+            "largura": 2.0
+        },
+        "area": 6.0,
+        "insumo": {
+            "produto": "Fosfato",
+            "dose": 4.0,
+            "quantidade": 24.0,
+            "extras": null
+        }
+    },
+    {
+        "cultura": "Soja",
+        "formato": "Circular",
+        "dimensoes": {
+            "raio": 3.0
+        },
+        "area": 28.274333882308138,
+        "insumo": {
+            "produto": "Pulverizador",
+            "dose": 500,
+            "quantidade": 4.0,
+            "extras": {
+                "num_ruas": 2,
+                "comprimento_medio": 4.0,
+                "taxa": 500
+            }
+        }
     }
 ]

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DER_TechSolution" id="E285A9C0-F446-E618-58E1-55E7EF2E3E9D" version="3.5">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:16:12 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E285A9C0-F446-E618-58E1-55E7EF2E3E9D</designId>
+</OSDM_Design>

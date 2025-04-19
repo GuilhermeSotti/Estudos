@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F2046925-BD13-BF18-D495-C9A6202F3E94" name="Plantacao">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:23:12 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<source>Área de cultivo pertencente a um produtor</source>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="plantacao_id" id="8583C67C-050E-8526-FB3D-648F87137F8E">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:23:36 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="5B902B72-7AD8-E429-2171-55AB5A14A1E9">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lote" id="B968301D-CCE0-5549-EBF7-614B7E6C105C">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:24:28 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="area" id="E338F0CB-E67F-2C42-482C-72F7B2E80246">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:24:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id" id="B9E08017-1157-B52D-2F90-1F2BCE299134">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:25:36 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id1" id="DF9DA042-EB91-7920-7B8A-99E2BF742A07">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:44:48 UTC</createdTime>
+<generatorID>5460EC33-DA84-E3BD-CD8D-EC08A97E654C</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>85A56D2D-0AC4-509E-812C-8F2A5E9A661D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="99FA2086-E8A5-BA73-25E9-0FF3739CD748" name="Plantacao PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:23:57 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8583C67C-050E-8526-FB3D-648F87137F8E</attributeRef>
+<attributeRef>B9E08017-1157-B52D-2F90-1F2BCE299134</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

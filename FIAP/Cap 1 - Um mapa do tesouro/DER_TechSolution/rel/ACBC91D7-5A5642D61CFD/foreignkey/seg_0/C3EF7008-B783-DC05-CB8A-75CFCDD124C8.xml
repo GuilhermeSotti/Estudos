@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C3EF7008-B783-DC05-CB8A-75CFCDD124C8" containerWithKeyObject="B4D7D271-3D0F-496F-831F-1C9D81270CBE" localFKIndex="695D0ECC-EC4E-AF9A-C819-F8993F68FD99" name="1:N → Cultura">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:09:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<referredTableLongName>Dados.Plantacao</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>A727610A-0D90-2A2D-F809-773D511BA2D7</referredTableID>
+<keyObject>6C4677B2-5EAD-BFDC-CC7C-C5B672C2395F</keyObject>
+<referredKeyID>6C4677B2-5EAD-BFDC-CC7C-C5B672C2395F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>plantacao_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -2,7 +2,7 @@ from src.back_end.models import Cultura
 import json
 import os
 
-CAMINHO_JSON = "FIAP\\Cap 1 - Startup FarmTech Solutions v2\\data\\dados_farmtech.json"
+CAMINHO_JSON = "Cap 1 - Startup FarmTech Solutions v2\\data\\dados_farmtech.json"
 
 registros = []
 

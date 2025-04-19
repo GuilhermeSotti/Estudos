@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="98E387D9-B95A-2113-CD5E-88D709018065" name="Leitura de Sensor">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:40:39 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>88AEEE4C-9D0A-2D1A-0636-51D942EF09AD</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ajuste_id" id="1CF75CFA-89D6-E272-7ECA-F7B68B341A90">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:41:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor" id="F493E253-2418-9609-C6BB-0BC0CDA1B2C2">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:41:16 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sensor_id" id="9126CFFB-4E0A-F432-E3D2-539FB183B5B3">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:42:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id" id="421C9EBE-B6C6-1BA6-4551-E2D174209B49">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:46 UTC</createdTime>
+<generatorID>526E3ABB-AAD2-8F04-E4A3-0815EBEDE7AC</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>1694FF9C-980B-6DB8-48B1-2A336E7B597F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_id" id="DD06CACE-A4C8-F550-9F83-3D3BF9CD6725">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:46 UTC</createdTime>
+<generatorID>526E3ABB-AAD2-8F04-E4A3-0815EBEDE7AC</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>C577C723-BC92-65F5-372F-90AC6DA66AAE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id" id="FD5747CD-FEE2-B46D-8C76-5C0AAF3A9B95">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:46 UTC</createdTime>
+<generatorID>526E3ABB-AAD2-8F04-E4A3-0815EBEDE7AC</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>CD14C705-4D4F-DDE7-7BD6-46D741807091</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sensor_id1" id="6EC950FF-CACA-AA21-2DD4-BEF1F9122DF2">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:46 UTC</createdTime>
+<generatorID>526E3ABB-AAD2-8F04-E4A3-0815EBEDE7AC</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>731284B9-7FE4-E7DA-F888-9FCA48418E0E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D9C0549C-803D-8762-9359-AC33064AFE5E" name="Leitura de Sensor PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:41:15 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1CF75CFA-89D6-E272-7ECA-F7B68B341A90</attributeRef>
+<attributeRef>9126CFFB-4E0A-F432-E3D2-539FB183B5B3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="1:N → Tipo de Sensor" directorySegmentName="seg_0" id="3E326C93-1AF2-C93D-A171-F63E6B859F91">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:47:02 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<sourcePk>64635E24-006F-88BC-C8A5-EAE1F8E8EFF5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D91064B6-2840-4D7F-FAB1-29F5ACF6C97F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5C792993-47BC-149E-CDD2-0CB1CC9151FB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="1:N → Insumo" directorySegmentName="seg_0" id="A4752B6E-BBB5-2855-4E06-4DE572CE8DA7">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:51:44 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<sourcePk>437AD372-F53B-CB41-3FAE-7DD6D1E61E7C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2B29227C-2F81-C155-F760-5F7219392620</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>54445D2D-722C-7309-510E-73A15BD52D04</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

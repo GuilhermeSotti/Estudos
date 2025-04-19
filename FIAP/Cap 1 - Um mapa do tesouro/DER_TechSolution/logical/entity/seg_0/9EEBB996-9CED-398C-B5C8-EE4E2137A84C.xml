@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9EEBB996-9CED-398C-B5C8-EE4E2137A84C" name="Ajuste de Aplicacao">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:34:05 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>88AEEE4C-9D0A-2D1A-0636-51D942EF09AD</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<source>Registro das correções de irrigação ou aplicação de insumos.</source>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ajuste_id" id="3C25109F-0023-3389-D01E-C5F67B88A961">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:34:56 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade_agua" id="02B6C582-2D0E-1F72-8899-4D271B211B69">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:35:05 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade_fertilizante" id="6D0CA76A-5073-4F96-2D95-6A7A6CDB5E71">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:35:18 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observacao" id="60DFB161-F1C1-AE3A-5E97-B70961A64ACE">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:35:29 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id" id="3186C15F-8A2C-D9A6-0A71-A3AC1AC3BB1B">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:35:46 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id1" id="062E8705-0150-3F0B-1065-EE2504CB1B40">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:05 UTC</createdTime>
+<generatorID>6B39576C-87DA-EA2E-A1E8-E5D9B09F1862</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>8583C67C-050E-8526-FB3D-648F87137F8E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id" id="3D94D5A9-7A53-2C71-D797-0AD686B0859E">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:48:05 UTC</createdTime>
+<generatorID>6B39576C-87DA-EA2E-A1E8-E5D9B09F1862</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>B9E08017-1157-B52D-2F90-1F2BCE299134</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85164446-309E-97F4-7CF3-64EA83F394ED" name="Ajuste de Aplicacao PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:35:04 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3C25109F-0023-3389-D01E-C5F67B88A961</attributeRef>
+<attributeRef>3186C15F-8A2C-D9A6-0A71-A3AC1AC3BB1B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

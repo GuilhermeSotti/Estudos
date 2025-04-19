@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="Dados" directorySegmentName="seg_0" id="7C0CC20B-BDFB-BC6D-E909-636A2D9BBE7D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 18:58:55 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>schema_1</ordsAlias>
+</SchemaObject>

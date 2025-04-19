@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="Monitoring" directorySegmentName="seg_0" id="7E108F9E-999E-6DE5-4666-9B810D71554E">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:12:57 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>schema_2</ordsAlias>
+</SchemaObject>
