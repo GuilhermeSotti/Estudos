@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2B92EC9-F9AD-356A-33C1-1CFF058FDA7E" schemaObject="7E108F9E-999E-6DE5-4666-9B810D71554E" name="Ajuste de Insumos">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:28:34 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_24</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ajuste_id" id="A20551B4-6CF3-E1D0-AE6E-1689011649B6">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="insumo_id" id="3DE33C74-C84D-5298-ECDD-97A16458E560">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BC8811B-5342-C1DD-1F34-9448D6966972" referredColumn="A4FFE1D5-0AB1-F3F7-F746-BCF7C317915A"/>
+</associations>
+</Column>
+<Column name="quantidade_aplicada" id="32C5D1EC-4A4A-5500-DC51-E0432BB41A59">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="historico_id" id="C3F35C96-09ED-2E17-CB74-AA6D9D82A949">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1F86531-793E-3DF5-E052-321DB1B07A9D" referredColumn="DAEB4FA3-22DC-9ACA-72D0-0CAD23CB8804"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B864937A-2A5C-642C-AD1B-190B2847646D" name="Ajuste de Insumos_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A20551B4-6CF3-E1D0-AE6E-1689011649B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="87992540-7FEB-B710-6F0A-BC25E585368D" name="TABLE_24_Insumo_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DE33C74-C84D-5298-ECDD-97A16458E560"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D9E5636-BAA8-5AE9-F9E8-ED6F6A3407AF" name="TABLE_24_Historico_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:30:43 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3F35C96-09ED-2E17-CB74-AA6D9D82A949"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DD1E32E5-6C8A-F09D-72D0-50502CA80073" schemaObject="7C0CC20B-BDFB-BC6D-E909-636A2D9BBE7D" name="Produtor">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 18:59:16 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="produtor_id" id="239040E6-0885-C92A-2F71-6117EAEA5FFD">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:01:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="08A382C2-E0BF-63E3-BF90-05B87CB3FAC2">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:01:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contato" id="0B54C3E7-BFCA-D3E9-2567-A8ED29B02C47">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:01:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="2BC59D14-FD02-CFA2-27ED-65A217ADCB9E">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:01:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="648A5A60-7059-5661-3990-03AAC1741468" name="Produtor_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:01:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="239040E6-0885-C92A-2F71-6117EAEA5FFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

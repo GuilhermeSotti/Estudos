@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA0B9213-B5E8-8158-8735-96625F542DB8" schemaObject="7E108F9E-999E-6DE5-4666-9B810D71554E" name="Sensor">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:14:13 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_17</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sensor_id" id="433D6797-7A98-012E-2222-41F2743529F8">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:15:32 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_id" id="971E4BBB-E908-556B-7B5E-2FBC4D6BF9E4">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:15:32 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34ABBD39-5268-71B3-E77B-65A753E5C136" referredColumn="1570453C-5F55-C625-7141-D10A155F0CE7"/>
+</associations>
+</Column>
+<Column name="descricao" id="4B97010B-7FAB-7F38-F781-55CAE4ECAA7D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:15:32 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cultura_id" id="01727DB0-184D-D3B7-7C66-EC8E10DAA1F8">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:15:32 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E46361C0-99B7-9FB7-C23A-8EC1E2669F08" referredColumn="6BEB1E8A-FC9F-7AE7-4754-8CBD0AE7FC0F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7B79DF9-F108-3697-A4EE-56CFBFB8393E" name="Sensor_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:15:32 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="433D6797-7A98-012E-2222-41F2743529F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB466B49-B526-7BE0-42FC-5F523401218D" name="Sensor_Tipo de Sensor_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:17:16 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="971E4BBB-E908-556B-7B5E-2FBC4D6BF9E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84FDAE84-D608-8F26-D563-D037B9A8B6D1" name="Sensor_Cultura_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:18:05 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01727DB0-184D-D3B7-7C66-EC8E10DAA1F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

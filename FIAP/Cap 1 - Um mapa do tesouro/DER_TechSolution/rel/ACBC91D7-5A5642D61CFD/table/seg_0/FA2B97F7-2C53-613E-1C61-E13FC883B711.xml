@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FA2B97F7-2C53-613E-1C61-E13FC883B711" schemaObject="7E108F9E-999E-6DE5-4666-9B810D71554E" name="Leitura do Sensor">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:25:03 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="leitura_id" id="188E4559-EB7B-5461-AC79-A030E834EAD8">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sensor_id" id="33BACF51-F2A2-90C2-15BF-0AC9A9550FE8">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3F2D0981-66AD-2801-E520-C42C381193FB" referredColumn="433D6797-7A98-012E-2222-41F2743529F8"/>
+</associations>
+</Column>
+<Column name="valor" id="601481DD-94DF-50C8-B7B0-779E8CC40773">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="historico_id" id="1A2D427E-5075-8E4D-1347-7F14C00C5708">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CB25CC7-5253-9C73-D4BC-CE804506F741" referredColumn="DAEB4FA3-22DC-9ACA-72D0-0CAD23CB8804"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A69F5610-097E-3EC8-6A1D-EF5844B3474F" name="Leitura_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="188E4559-EB7B-5461-AC79-A030E834EAD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F48B5689-1A07-53A1-E0A2-4AD0EA7D2715" name="TABLE_23_Sensor_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33BACF51-F2A2-90C2-15BF-0AC9A9550FE8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51E82965-C9E6-3F1B-4F25-F02317E486EA" name="TABLE_23_Historico_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:27:10 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A2D427E-5075-8E4D-1347-7F14C00C5708"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

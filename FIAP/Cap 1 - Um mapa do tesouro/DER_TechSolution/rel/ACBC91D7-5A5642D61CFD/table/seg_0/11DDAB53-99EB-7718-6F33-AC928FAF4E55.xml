@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="11DDAB53-99EB-7718-6F33-AC928FAF4E55" schemaObject="7E108F9E-999E-6DE5-4666-9B810D71554E" name="Historico">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:22:21 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<ordsAlias>table_22</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="historico_id" id="DAEB4FA3-22DC-9ACA-72D0-0CAD23CB8804">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_registro" id="B1A3E245-D6DB-97D6-BDCD-7E5066EFB7DD">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="A2DE0C39-5227-F943-14D7-C6AA83D24564">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario" id="7E236C24-4C92-A569-CDA7-5C3E4F6CAF64">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cultura_id" id="8A5A28CF-05B1-3DCC-4A12-63ADB618D61D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:55 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CBE9D46-D576-55F2-B94D-B1A47888C9FF" referredColumn="6BEB1E8A-FC9F-7AE7-4754-8CBD0AE7FC0F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62D719F9-88E4-4698-A18C-993BA41DA909" name="Historico_PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:01 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DAEB4FA3-22DC-9ACA-72D0-0CAD23CB8804"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B1819B1-B811-303C-A5FF-93BC97391D9B" name="Historico_Cultura_FK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 19:24:55 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A5A28CF-05B1-3DCC-4A12-63ADB618D61D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
