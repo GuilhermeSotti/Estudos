@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="1:N → Ajuste de Insumo" directorySegmentName="seg_0" id="350BEBBE-A58A-5939-B8A8-17D676541DA1">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:49:54 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<sourcePk>16BC7636-DDD6-B8C8-DEF2-ED2E5B3C6D2F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>54445D2D-722C-7309-510E-73A15BD52D04</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2F1C9ED3-CDB3-9B37-E82C-AB0129E832AA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

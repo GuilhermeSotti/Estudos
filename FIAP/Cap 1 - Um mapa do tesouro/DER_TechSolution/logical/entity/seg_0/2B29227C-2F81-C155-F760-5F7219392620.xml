@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B29227C-2F81-C155-F760-5F7219392620" name="Cultura">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:26:59 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<source>Tipo de cultivo (ex.: café, soja) em uma plantação.</source>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cultura_id" id="F12EE640-9D9E-2A15-8AAC-C15992A3E433">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:27:20 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="5CACA55A-E920-B292-0401-400B95FEBC72">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:27:30 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observacao" id="B53C2BF2-C83A-FD3D-E69C-C172BC5A12E4">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:27:44 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id" id="9FABE889-BD8A-998A-E141-1203133488E5">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:28:02 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id1" id="4F826EDD-522B-0312-1ECA-3DDB2396AD07">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:44:55 UTC</createdTime>
+<generatorID>EBF98A76-D377-D3D3-2500-BB0419A2780A</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>8583C67C-050E-8526-FB3D-648F87137F8E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id" id="751BA028-D08D-3E2F-63E7-B8B903DE627D">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:44:55 UTC</createdTime>
+<generatorID>EBF98A76-D377-D3D3-2500-BB0419A2780A</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>B9E08017-1157-B52D-2F90-1F2BCE299134</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="437AD372-F53B-CB41-3FAE-7DD6D1E61E7C" name="Cultura PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:28:27 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9FABE889-BD8A-998A-E141-1203133488E5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

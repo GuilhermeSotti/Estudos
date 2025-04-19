@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="1:N → Plantacao)" directorySegmentName="seg_0" id="5460EC33-DA84-E3BD-CD8D-EC08A97E654C">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:43:02 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<sourcePk>45F1B729-5F57-2AAC-F943-25482300E265</sourcePk>
+<targetPk>99FA2086-E8A5-BA73-25E9-0FF3739CD748</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3E00B6E6-DDFA-EBDD-68B1-8FFAB4AF1313</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F2046925-BD13-BF18-D495-C9A6202F3E94</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

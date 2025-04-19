@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D91064B6-2840-4D7F-FAB1-29F5ACF6C97F" name="Sensor">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:28:44 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<source>Dispositivo IoT que mede umidade, pH ou nutrientes.</source>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sensor_id" id="731284B9-7FE4-E7DA-F888-9FCA48418E0E">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:29:09 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_id" id="C577C723-BC92-65F5-372F-90AC6DA66AAE">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:29:15 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="modelo" id="D4C383E8-E853-D0C8-7352-6B083EC083D1">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:29:49 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descricao" id="ACA36EED-C249-98A6-F63C-3FCC4E9255EA">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:30:12 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id" id="1694FF9C-980B-6DB8-48B1-2A336E7B597F">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:30:27 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plantacao_id1" id="F614DA1B-7234-3AF9-ACEC-16E47E49536C">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:46:47 UTC</createdTime>
+<generatorID>FE8B74D4-7F77-C092-2F4F-D2BF297B12EA</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>8583C67C-050E-8526-FB3D-648F87137F8E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produtor_id" id="CD14C705-4D4F-DDE7-7BD6-46D741807091">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:46:47 UTC</createdTime>
+<generatorID>FE8B74D4-7F77-C092-2F4F-D2BF297B12EA</generatorID>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<referedAttribute>B9E08017-1157-B52D-2F90-1F2BCE299134</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="64635E24-006F-88BC-C8A5-EAE1F8E8EFF5" name="Sensor PK">
+<createdBy>Gpire</createdBy>
+<createdTime>2025-04-19 17:30:36 UTC</createdTime>
+<ownerDesignName>DER_TechSolution</ownerDesignName>
+<engineerTo>
+<item key="ACBC91D7-C25C-0992-D2FD-5A5642D61CFD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1694FF9C-980B-6DB8-48B1-2A336E7B597F</attributeRef>
+<attributeRef>C577C723-BC92-65F5-372F-90AC6DA66AAE</attributeRef>
+<attributeRef>CD14C705-4D4F-DDE7-7BD6-46D741807091</attributeRef>
+<attributeRef>731284B9-7FE4-E7DA-F888-9FCA48418E0E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
