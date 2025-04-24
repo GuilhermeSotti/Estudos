@@ -1,0 +1,13 @@
+requests
+pandas
+numpy
+scikit-learn
+joblib
+Flask
+pydantic
+geopandas
+ortools
+pyodbc
+PyYAML
+faostat
+sqlalchemy

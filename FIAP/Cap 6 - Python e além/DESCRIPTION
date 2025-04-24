@@ -1,0 +1,31 @@
+Package: TechSolution
+Type: Package
+Title: Ferramentas para ingestão, análise e dashboard de dados agro
+Version: 0.1.0
+Authors@R: 
+    person("Guilherme", "Pires de Sotti Machado", email = "gpiresmachado@hotmail.com", role = c("aut", "cre"))
+Description: Funções para coletar FAOSTAT/COMEXSTAT, pré-processar, treinar modelo de perdas na colheita e dashboard Shiny.
+Depends: 
+    R (>= 4.0.0),
+    httr,
+    jsonlite,
+    DBI,
+    oci (ou ROracle),
+    dplyr,
+    tidyr,
+    caret,
+    shiny
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    shinycssloaders,
+    shinyjs,
+    shinythemes,
+    shinydashboard,
+    plotly
+VignetteBuilder: knitr

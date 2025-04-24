@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=adm!1234
+      - MSSQL_PID=Developer
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-U", "sa", "-P", "adm!1234", "-Q", "SELECT 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+volumes:
+  oracle-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: \Cap 6 - Python e além\data
+      o: bind
