@@ -1,0 +1,143 @@
+2025-04-21 19:51:17,704 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-21 19:51:22,665 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-21 19:52:18,891 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-21 19:52:18,909 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-21 19:52:24,501 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-21 19:53:41,924 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-21 19:53:45,951 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-21 19:55:00,515 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-21 19:55:00,529 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-21 19:55:05,259 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-21 20:06:54,474 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-21 20:06:57,727 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-21 20:07:38,084 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-21 20:07:38,097 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-21 20:07:43,934 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-22 21:25:59,999 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-22 21:26:03,742 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-22 21:29:30,204 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-22 21:57:01,116 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2024
+2025-04-22 21:57:01,907 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 0 linhas
+2025-04-22 21:57:02,190 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-22 22:07:30,531 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-22 22:07:34,005 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-22 22:11:04,588 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-22 22:11:08,858 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-22 22:12:17,038 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-22 23:50:36,938 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-22 23:50:40,296 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-22 23:58:27,596 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-22 23:58:30,757 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-22 23:59:01,699 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 00:20:57,680 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 00:21:00,610 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-23 21:22:01,747 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 21:22:05,434 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-23 21:23:26,570 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 22:25:25,852 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 22:25:29,524 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 65977 linhas
+2025-04-23 22:26:29,779 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:17:03,132 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:17:06,774 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:17:08,529 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:24:20,856 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:24:24,359 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:24:24,974 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:25:59,483 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:26:02,574 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:26:03,110 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:32:24,974 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:32:28,292 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:32:28,839 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:42:02,519 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:42:05,183 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:42:05,728 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:54:49,082 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:54:52,109 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:54:53,217 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-23 23:55:41,990 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-23 23:55:44,568 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-23 23:55:45,106 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 00:09:06,983 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 00:09:15,598 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 00:09:16,727 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 00:11:46,487 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 00:11:49,847 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 00:11:50,557 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 01:40:42,362 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 01:40:45,384 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 01:40:46,062 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 01:40:48,454 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 01:40:51,362 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 01:43:00,846 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 01:43:04,850 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 01:43:05,371 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 20:58:52,739 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 20:58:58,245 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 20:58:59,878 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:03:31,354 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:04:44,123 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 21:08:05,722 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:08:08,931 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:08:25,140 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:08:44,398 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:08:48,082 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 21:10:22,716 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:10:25,889 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:10:52,371 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:10:56,481 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:29:38,152 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:29:41,350 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:29:42,153 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:29:45,895 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:30:22,113 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 21:35:04,662 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:35:07,932 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:35:09,102 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:35:12,802 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:35:16,071 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 21:36:42,325 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:36:45,681 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:36:46,901 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:38:14,894 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:38:18,589 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:38:19,385 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:39:30,521 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:39:33,901 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:39:34,585 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:40:37,266 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:40:40,656 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:40:41,234 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:46:00,784 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:46:03,609 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:46:04,296 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:48:05,569 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:48:10,082 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:49:46,680 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:49:49,583 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:52:18,186 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 21:52:21,435 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 21:52:22,240 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 21:52:28,950 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 21:52:31,853 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 22:00:28,528 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 22:00:31,418 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 22:00:31,928 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 22:04:21,238 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 22:04:24,204 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 22:04:25,468 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 22:05:40,840 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 22:05:44,273 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 22:05:44,823 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 22:05:46,947 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 22:05:49,827 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 23:30:02,544 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 23:30:06,265 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 23:30:31,479 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 23:30:34,395 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 23:30:37,778 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
+2025-04-24 23:40:38,952 - ingestion.faostat_ingest - INFO - Iniciando ingestão FAOSTAT para QCL, ano 2023
+2025-04-24 23:40:42,103 - ingestion.faostat_ingest - INFO - Dados FAOSTAT carregados em DataFrame com 500 linhas
+2025-04-24 23:40:43,254 - ingestion.faostat_ingest - INFO - Ingestão FAOSTAT concluída.
+2025-04-24 23:40:45,731 - ingestion.comexstat_ingest - INFO - Iniciando ingestão COMEXSTAT para 1006 2023 Export
+2025-04-24 23:40:50,692 - ingestion.comexstat_ingest - INFO - Ingestão COMEXSTAT concluída.
