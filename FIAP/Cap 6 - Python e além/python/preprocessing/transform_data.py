@@ -19,9 +19,3 @@ def normalize_numeric(df: pd.DataFrame, cols: list) -> pd.DataFrame:
         else:
             print("Coluna '{col}' não será normalizada.")
     return df_norm
-
-def encode_categorical(df: pd.DataFrame, cols: list) -> pd.DataFrame:
-    """
-    Aplica one-hot encoding para as colunas categóricas.
-    """
-    return pd.get_dummies(df, columns=cols, drop_first=True)

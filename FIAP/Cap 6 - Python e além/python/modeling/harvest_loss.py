@@ -1,20 +1,24 @@
+import os
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import KBinsDiscretizer
 import joblib
 
 def train_harvest_loss(df: pd.DataFrame, features: list, target: str, out_path: str):
     """
-    Treina modelo de classificação para risco de alta perda na colheita.
+    Discretiza perdas em 2 classes e treina RandomForestClassifier.
     """
-    X, y = df[features], df[target]
-    clf = LogisticRegression(max_iter=200)
+    dirpath = os.path.dirname(out_path)
+    if dirpath and not os.path.isdir(dirpath):
+        os.makedirs(dirpath, exist_ok=True)
+
+    X = df[features]
+    y = df[target]
+
+    kbd = KBinsDiscretizer(n_bins=2, encode='ordinal', strategy='quantile')
+    y = kbd.fit_transform(df[[features[0]]]).astype(int).ravel()
+
+    clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X, y)
     joblib.dump(clf, out_path)
     return clf
-
-def predict_harvest_loss(model_path: str, X_new: pd.DataFrame) -> pd.Series:
-    """
-    Retorna probabilidade de perda elevada.
-    """
-    clf = joblib.load(model_path)
-    return pd.Series(clf.predict_proba(X_new)[:,1], index=X_new.index)

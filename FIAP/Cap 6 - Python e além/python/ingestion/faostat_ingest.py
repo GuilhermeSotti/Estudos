@@ -1,4 +1,4 @@
-from faostat import list_datasets_df, get_data
+from faostat import get_data
 from .utils import get_logger, sql_connection
 import pandas as pd
 
@@ -22,8 +22,7 @@ def ingest_faostat(dataset_code: str, year: int):
         show_notes=False,
         strval=True
     )
-
-    df = pd.DataFrame(data_list[1:], columns=data_list[0])
+    df = pd.DataFrame(data_list[1:501], columns=data_list[0])
     logger.info(f"Dados FAOSTAT carregados em DataFrame com {len(df)} linhas")
 
     conn = sql_connection()
