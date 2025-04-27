@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: farmtech_db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "admin!1234"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+volumes:
+  sqlvolume:
+    driver: local
+    driver_opts:
+      type: none
+      device: Cap 1 - Construindo uma máquina agrícola\data
+      o: bind
