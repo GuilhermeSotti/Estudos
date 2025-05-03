@@ -1,0 +1,5 @@
+dotenv
+serial
+pyserial
+requests
+pyodbc
