@@ -1,0 +1,14 @@
+{
+    "name": "Construindo uma máquina agrícola - ESP32",
+    "platform": "esp32",
+    "board": "adafruit_qtpy_esp32",
+    "components": [
+      { "type": "dht22",   "pin": "4",   "name": "DHT22" },
+      { "type": "ldr",     "pin": "34",  "name": "LDR" },
+      { "type": "pushbutton", "pin": "12", "name": "Btn P" },
+      { "type": "pushbutton", "pin": "14", "name": "Btn K" },
+      { "type": "relay",   "pin": "26",  "name": "Relé" },
+      { "type": "sdcard",  "cs": "5",    "name": "SD" },
+      { "type": "serial",  "rx": "9",    "tx": "10" }
+    ]
+  }

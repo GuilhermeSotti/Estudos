@@ -10,16 +10,13 @@ void setup() {
   delay(1000);
   Sensors::init();
   Actuators::init();
+  Comm::init();
 }
 
 void loop() {
-  SensorReadings data = Sensors::readAll();
-
+  auto data = Sensors::readAll();
   bool irrigate = Logic::evaluate(data);
-
   Actuators::setRelay(irrigate);
-
   Comm::sendJSON(data, irrigate);
-
   delay(Config::LOOP_DELAY_MS);
 }

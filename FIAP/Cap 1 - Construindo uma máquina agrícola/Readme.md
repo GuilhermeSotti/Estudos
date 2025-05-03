@@ -79,7 +79,7 @@ pip install -r requirements.txt
 python main.py
 ```
 ```bash
-shiny::runApp("R/app.R", launch.browser = TRUE)
+shiny::runApp("Cap 1 - Construindo uma máquina agrícola/R/app.R", launch.browser = TRUE)
 ```
 
 ---

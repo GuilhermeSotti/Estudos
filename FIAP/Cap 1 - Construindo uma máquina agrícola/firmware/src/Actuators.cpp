@@ -6,7 +6,7 @@ static bool relayState = false;
 
 void Actuators::init() {
   pinMode(Config::RELAY_PIN, OUTPUT);
-  digitalWrite(Config::RELAY_PIN, HIGH);
+  digitalWrite(Config::RELAY_PIN, HIGH); // OFF no boot
 }
 
 void Actuators::setRelay(bool on) {

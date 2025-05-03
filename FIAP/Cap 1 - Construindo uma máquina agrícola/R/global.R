@@ -1,17 +1,16 @@
-library(shiny)
-library(shinydashboard)
 library(DBI)
 library(odbc)
-library(dplyr)
-library(ggplot2)
-library(DT)
+library(yaml)
 
-con <- dbConnect(
-  odbc::odbc(),
-  Driver   = "ODBC Driver 18 for SQL Server",
-  Server   = "localhost,1433",
-  Database = "FarmTechDB",
-  UID      = "sa",
-  PWD      = "admin!1234",
+config <- yaml::read_yaml("c:/Projetos/Estudos/FIAP/Cap 1 - Construindo uma máquina agrícola/config.yaml")
+sql_conf <- config$mssql
+
+con <- dbConnect(odbc::odbc(),
+  Driver   = sql_conf$driver,
+  Server   = sql_conf$host,
+  Port     = sql_conf$port,
+  Database = sql_conf$database,
+  Encryption = "no",
+  Trusted_Connection = "Yes",
   TrustServerCertificate = "yes"
 )
