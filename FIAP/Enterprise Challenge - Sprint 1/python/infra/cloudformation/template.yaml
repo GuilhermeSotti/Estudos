@@ -1,0 +1,245 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Infraestrutura para pipeline industrial: VPC, Subnets, IoT Core, S3 Data Lake, 
+  Redshift e IAM Roles.
+
+Parameters:
+  VpcCidr:
+    Type: String
+    Default: 10.0.0.0/16
+    Description: CIDR block da VPC
+  PublicSubnets:
+    Type: List<String>
+    Default:
+      - 10.0.1.0/24
+      - 10.0.2.0/24
+    Description: CIDRs para subnets públicas
+  PrivateSubnets:
+    Type: List<String>
+    Default:
+      - 10.0.3.0/24
+      - 10.0.4.0/24
+    Description: CIDRs para subnets privadas
+  S3BucketName:
+    Type: String
+    Default: industrial-data-lake
+    Description: Nome do bucket S3 para Data Lake
+  RedshiftMasterUserPassword:
+    Type: String
+    NoEcho: true
+    Description: Senha do usuário master do Redshift
+
+Resources:
+
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCidr
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: industrial-vpc
+
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: industrial-igw
+
+  VPCGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: public-rt
+
+  PublicRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Select [ 0, !Ref PublicSubnets ]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: public-subnet-1
+
+  PublicSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Select [ 1, !Ref PublicSubnets ]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: public-subnet-2
+
+  PublicSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet1
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet2
+      RouteTableId: !Ref PublicRouteTable
+
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Select [ 0, !Ref PrivateSubnets ]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: private-subnet-1
+
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Select [ 1, !Ref PrivateSubnets ]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: private-subnet-2
+
+  IotSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow MQTT/TLS and all egress
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8883
+          ToPort: 8883
+          CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: 0
+          ToPort: 0
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: iot-sg
+
+  IotThing:
+    Type: AWS::IoT::Thing
+    Properties:
+      ThingName: esp32-sensor
+
+  IotPolicy:
+    Type: AWS::IoT::Policy
+    Properties:
+      PolicyName: esp32-mqtt-policy
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - iot:Connect
+              - iot:Publish
+              - iot:Subscribe
+              - iot:Receive
+            Resource: "*"
+
+  IotCertificate:
+    Type: AWS::IoT::Certificate
+    Properties:
+      Status: ACTIVE
+
+  PolicyPrincipalAttachment:
+    Type: AWS::IoT::PolicyPrincipalAttachment
+    Properties:
+      PolicyName: !Ref IotPolicy
+      Principal: !Ref IotCertificate
+
+  ThingPrincipalAttachment:
+    Type: AWS::IoT::ThingPrincipalAttachment
+    Properties:
+      ThingName: !Ref IotThing
+      Principal: !Ref IotCertificate
+
+  IotEndpoint:
+    Type: AWS::IoT::Endpoint
+    Properties:
+      EndpointType: iot:Data-ATS
+
+  DataLakeBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  RedshiftS3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: RedshiftCopyRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: redshift.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+
+  RedshiftCluster:
+    Type: AWS::Redshift::Cluster
+    Properties:
+      ClusterType: single-node
+      DBName: dev
+      MasterUsername: admin
+      MasterUserPassword: !Ref RedshiftMasterUserPassword
+      NodeType: dc2.large
+      IamRoles:
+        - !GetAtt RedshiftS3Role.Arn
+      Port: 5439
+
+Outputs:
+  VpcId:
+    Description: ID da VPC criada
+    Value: !Ref VPC
+
+  PublicSubnetIds:
+    Description: IDs das subnets públicas
+    Value: !Join [",", [ !Ref PublicSubnet1, !Ref PublicSubnet2 ] ]
+
+  PrivateSubnetIds:
+    Description: IDs das subnets privadas
+    Value: !Join [",", [ !Ref PrivateSubnet1, !Ref PrivateSubnet2 ] ]
+
+  S3Bucket:
+    Description: Nome do bucket S3 Data Lake
+    Value: !Ref DataLakeBucket
+
+  RedshiftEndpoint:
+    Description: Endpoint do cluster Redshift
+    Value: !GetAtt RedshiftCluster.Endpoint.Address
+
+  IotEndpointAddress:
+    Description: Endpoint MQTT do IoT Core
+    Value: !GetAtt IotEndpoint.EndpointAddress
