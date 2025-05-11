@@ -1,0 +1,12 @@
+paho-mqtt
+boto3
+pandas
+pyarrow
+influxdb
+psycopg2-binary
+APScheduler
+scikit-learn
+joblib
+requests
+python-dotenv
+terraform-compliance
