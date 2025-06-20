@@ -1,7 +1,7 @@
 import streamlit as st
-from ml_pipeline.predict import predict_next
+from predict.predict import predict_next
 from streamlit_app.utils import fetch_recent_data, format_timestamp
-from ml_pipeline.train_model import train_and_export
+from predict.train_model import train_and_export
 
 st.set_page_config(page_title="FarmTech Dashboard", layout="wide")
 st.title("FarmTech Solutions")

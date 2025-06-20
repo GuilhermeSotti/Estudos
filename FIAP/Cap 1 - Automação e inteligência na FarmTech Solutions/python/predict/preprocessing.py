@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from ml_pipeline.config import DB_URI
+from predict.config import DB_URI
 
 def load_data(table_name: str = "sensor_data", limit: int = None) -> pd.DataFrame:
     """

@@ -1,7 +1,7 @@
 from joblib import load
 import pandas as pd
-from ml_pipeline.config import MODEL_PATH
-from ml_pipeline.preprocessing import engineer_features, get_feature_target
+from predict.config import MODEL_PATH
+from predict.preprocessing import engineer_features, get_feature_target
 
 _model = None
 
