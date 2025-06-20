@@ -1,0 +1,30 @@
+{
+  "name": "FarmTech ESP32 + LCD I2C",
+  "description": "ESP32 Dev + LCD 16x2 I2C",
+  "version": "1.0.0",
+  "author": "",
+  "boards": [
+    "esp32dev"
+  ],
+  "components": [
+    {
+      "type": "esp32dev",
+      "id": "esp32",
+      "name": "ESP32 DevKit",
+      "connections": []
+    },
+    {
+      "type": "i2c-lcd",
+      "id": "lcd",
+      "address": 39,
+      "width": 16,
+      "height": 2,
+      "connections": [
+        ["GND", "esp32:GND"],
+        ["VCC", "esp32:3V3"],
+        ["SDA", "esp32:GPIO21"],
+        ["SCL", "esp32:GPIO22"]
+      ]
+    }
+  ]
+}

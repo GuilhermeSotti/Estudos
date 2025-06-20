@@ -1,0 +1,56 @@
+data:
+  raw_path: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/data/raw/seeds_dataset.txt"
+  processed_dir: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/data/processed"
+  test_size: 0.3
+  random_state: 42
+  stratify: true
+
+features:
+  use_compactness: true
+  use_ratio_length_width: true
+  use_pca: false
+  pca_n_components: 2
+
+preprocessing:
+  outlier_strategy: "remove"
+  outlier_method: "iqr"
+  outlier_iqr_factor: 1.5
+  outlier_contamination: 0.05
+  impute_strategy: "median"
+  
+model:
+  candidates:
+    - name: "KNN"
+      type: "knn"
+      params:
+        n_neighbors: [3,5,7]
+        metric: ["euclidean", "manhattan"]
+    - name: "SVM"
+      type: "svm"
+      params:
+        C: [0.1, 1, 10]
+        kernel: ["linear", "rbf"]
+        gamma: ["scale","auto"]
+    - name: "RandomForest"
+      type: "rf"
+      params:
+        n_estimators: [50,100]
+        max_depth: [null, 10, 20]
+  cv:
+    n_splits: 5
+    shuffle: true
+  scoring: ["accuracy", "precision_macro", "recall_macro", "f1_macro"]
+  optimize: true
+  optimization:
+    method: "grid"
+    n_iter: 20
+output:
+  model_dir: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/outputs/models"
+  report_dir: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/outputs/reports"
+  log_dir: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/outputs/logs"
+logging:
+  level: "INFO"
+  log_dir: "Cap 3 - (IR ALÉM) Implementando algoritmos de Machine Learning com Scikit-learn/outputs/logs"
+api:
+  host: "0.0.0.0"
+  port: 5000

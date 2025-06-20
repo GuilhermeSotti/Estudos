@@ -1,0 +1,7 @@
+streamlit
+pandas
+sqlalchemy
+scikit-learn
+joblib
+pyyaml
+pyserial
