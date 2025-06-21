@@ -1,5 +1,0 @@
-db_uri: "sqlite:///../farmtech.db"
-
-serial:
-  port: "/dev/ttyUSB0"
-  baud_rate: 115200

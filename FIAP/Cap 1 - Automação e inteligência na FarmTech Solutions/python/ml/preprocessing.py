@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from predict.config import DB_URI
+from config import DB_URI
 
 def load_data(table_name: str = "sensor_data", limit: int = None) -> pd.DataFrame:
     """
@@ -22,9 +22,7 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["hour"] = df["timestamp"].dt.hour
     df["dayofweek"] = df["timestamp"].dt.dayofweek
-    # Exemplo de média móvel de umidade (janela de 3 leituras)
     df["umidade_ma3"] = df["umidade"].rolling(3, min_periods=1).mean()
-    # Target: umidade daqui a 1 leitura (ajuste conforme intervalo de coleta)
     df["umidade_futura"] = df["umidade"].shift(-1)
     df = df.dropna(subset=["umidade_futura"])
     return df

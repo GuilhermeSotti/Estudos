@@ -1,0 +1,9 @@
+db_uri: "sqlite:///../farmtech.db"
+
+serial:
+  port: "rfc2217://localhost:4001"
+  baud_rate: 115200
+
+http:
+  host: "0.0.0.0"
+  port: 8000

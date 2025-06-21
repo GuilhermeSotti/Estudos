@@ -50,12 +50,9 @@ O FarmTech Solutions é uma aplicação voltada para cooperativas agrícolas de 
 - **Explainability**: integração com SHAP (e possivelmente LIME) para interpretar importâncias e decisões do modelo.
 - **Deploy de API REST**: serviço em FastAPI (ou Flask) para predição de novas amostras, calculando features necessárias (ex.: compacidade) se ausentes.
 - **Scripts CLI**: orquestração de treino, avaliação e predição em lote ou interativa.
-- **Containerização**: Dockerfile para criar imagem leve e facilitar deploy em servidor local ou nuvem.
 - **Monitoramento e manutenção**: sugestões para monitorar drift de dados, re-treinamento automático, logs de predições.
-- **Notebooks-esqueleto**: geração automática de notebooks para EDA, Feature Engineering e Modeling.
 - **Integração opcional de Visão Computacional**: pipeline para extrair medidas de imagens de grãos via OpenCV.
 - **Dashboard Interativo**: ideia de uso de Streamlit/Dash para exibir estatísticas, predições e explicações a operadores.
-- **Experiment Tracking (opcional)**: integração com MLflow ou Weights & Biases para registrar resultados de diferentes experimentos.
 
 ## 🛠️ Tecnologias Utilizadas
 - **Linguagem e Bibliotecas**:
@@ -65,14 +62,11 @@ O FarmTech Solutions é uma aplicação voltada para cooperativas agrícolas de 
   - matplotlib  
   - joblib  
   - pyyaml (config)  
-  - FastAPI (ou Flask) + Uvicorn  
   - OpenCV (opcional, para pipeline de visão)  
   - SHAP (explainability)  
   - pytest (testes)  
-  - nbformat (geração de notebooks-esqueleto)  
 
 - **Infraestrutura**:
-  - Docker para containerização  
   - GitHub
 - **Ambiente de Desenvolvimento**:
   - venv para gerenciar dependências  
@@ -87,7 +81,6 @@ O FarmTech Solutions é uma aplicação voltada para cooperativas agrícolas de 
 - Python 3.8 ou superior instalado.
 - Ferramentas de ambiente virtual (venv, Poetry ou Pipenv).
 - Internet (para baixar dataset via script) ou download manual do Seeds Dataset.
-- Docker (opcional, para containerização).
 - Permissões para criar diretórios e salvar arquivos de saída.
 
 ## 💻 Como Executar

@@ -1,7 +1,10 @@
-streamlit
+PyYAML
+SQLAlchemy
 pandas
-sqlalchemy
 scikit-learn
 joblib
-pyyaml
+streamlit
 pyserial
+flask
+streamlit-autorefresh
+PySerial 
