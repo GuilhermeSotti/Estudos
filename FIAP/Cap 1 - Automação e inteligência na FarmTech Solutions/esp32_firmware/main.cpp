@@ -3,10 +3,6 @@
 #include "SensorManager.h"
 #include "LCDManager.h"
 
-
-#include <WiFi.h>
-#include <HTTPClient.h>
-
 void printForPlotter(uint8_t umid, uint8_t nutr) {
     Serial.print(F("umidade:"));
     Serial.println(umid);
@@ -14,31 +10,9 @@ void printForPlotter(uint8_t umid, uint8_t nutr) {
     Serial.println(nutr);
 }
 
-void sendToBackendHTTP(uint8_t umid, uint8_t nutr) {
-
-    if (WiFi.status() == WL_CONNECTED) {
-        HTTPClient http;
-        http.begin(BACKEND_URL);
-        http.addHeader("Content-Type", "application/json");
-        char payload[64];
-        // Usa snprintf para formatar JSON: evita String
-        snprintf(payload, sizeof(payload),
-                 "{\"umidade\":%u,\"nutriente\":%u}", umid, nutr);
-        int code = http.POST(payload);
-        // opcional: verificar code
-        http.end();
-    }
-}
-
 void setup() {
     Serial.begin(115200);
 
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-    uint8_t retries = 0;
-    while (WiFi.status() != WL_CONNECTED && retries < 20) {
-        delay(500);
-        retries++;
-    }
     SensorManager::init();
     LCDManager::init();
 }
@@ -49,18 +23,14 @@ void loop() {
 
     printForPlotter(umidade, nutriente);
 
-
     char buf[64];
     int n = snprintf(buf, sizeof(buf),
                      "{\"umidade\":%u,\"nutriente\":%u}", umidade, nutriente);
     if (n > 0 && n < int(sizeof(buf))) {
         Serial.println(buf);
     } else {
-        // Em caso de erro, poderia logar
         Serial.println(F("{\"umidade\":0,\"nutriente\":0}"));
     }
-
-    sendToBackendHTTP(umidade, nutriente);
 
     LCDManager::display(umidade, nutriente);
 

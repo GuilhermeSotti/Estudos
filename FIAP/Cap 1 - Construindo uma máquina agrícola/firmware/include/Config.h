@@ -1,17 +1,21 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-namespace Config {
-  constexpr int DHT_PIN         = 4;
-  constexpr int LDR_PIN         = 34;
-  constexpr int PB_PIN_P        = 12;
-  constexpr int PB_PIN_K        = 14;
-  constexpr int RELAY_PIN       = 26;
-  constexpr int SD_CS_PIN       = 5;
+#include <stdint.h>
 
-  constexpr unsigned long LOOP_DELAY_MS       = 5000;  // 5s
-  constexpr int HUMIDITY_THRESHOLD_DEFAULT   = 30;    // %
-  constexpr int MA_WINDOW_SIZE               = 6;     // média móvel (6 leituras ~30s)
-}
+static const uint32_t READ_INTERVAL_MS = 2000;
+
+static const uint8_t PIN_SOIL_MOISTURE = 34;
+static const uint8_t PIN_NUTRIENT       = 35;
+
+static const uint8_t I2C_SDA = 21;
+static const uint8_t I2C_SCL = 22;
+static const uint8_t LCD_I2C_ADDR = 0x27;
+
+static const uint16_t ADC_MAX = 4095;
+
+static const char* WIFI_SSID = "SEU_SSID";
+static const char* WIFI_PASSWORD = "SUA_SENHA";
+static const char* BACKEND_URL = "http://192.168.1.100:8000/ingest";
 
 #endif

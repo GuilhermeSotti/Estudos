@@ -2,8 +2,8 @@ from joblib import dump
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
-from predict.config import MODEL_PATH, MODEL_DIR, RF_PARAMS
-from predict.preprocessing import load_data, engineer_features, get_feature_target
+from config import MODEL_PATH, MODEL_DIR, RF_PARAMS
+from preprocessing import load_data, engineer_features, get_feature_target
 
 def train_and_export(test_size: float = 0.2):
     df = load_data()
