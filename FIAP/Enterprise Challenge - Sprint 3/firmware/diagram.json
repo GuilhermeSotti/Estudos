@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Sprint3 Team",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 100,
+      "left": -220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "mpu6050",
+      "top": 40,
+      "left": 40,
+      "attrs": {
+        "i2cAddress": "0x68"
+      }
+    },
+    {
+      "type": "board-ds18b20",
+      "id": "ds18b20",
+      "top": 200,
+      "left": 40,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4k7",
+      "top": 160,
+      "left": 140,
+      "attrs": {
+        "value": "4700"
+      }
+    }
+  ],
+  "connections": [
+    [ "mpu6050:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "mpu6050:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "mpu6050:SDA", "esp:21", "green", [ "h0" ] ],
+    [ "mpu6050:SCL", "esp:22", "green", [ "h0" ] ],
+
+    [ "ds18b20:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ds18b20:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ds18b20:DQ", "esp:15", "green", [ "h0" ] ],
+
+    [ "esp:3V3", "r4k7:1", "red", [ "v0" ] ],
+    [ "r4k7:2", "ds18b20:DQ", "red", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

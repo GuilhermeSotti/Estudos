@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pm_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+
+  mqtt_consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile.mqtt_consumer
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=factory/machine/+/sensors
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_DB=pm_db
+      - PG_USER=postgres
+      - PG_PASS=postgres
+    depends_on:
+      - postgres
+      - mosquitto
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+  mosquitto_data:
+  mosquitto_log:

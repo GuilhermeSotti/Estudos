@@ -21,7 +21,7 @@ def main():
     session = get_session(engine)
 
     try:
-        ser = serial.serial_for_url(port, baudrate=baud, timeout=1)
+        ser = serial.serial_for_url(port, baudrate=baud, timeout=1000)
         print(f"[Ingest] Conectado a {port} @ {baud}bps")
     except Exception as e:
         print(f"[Erro] Não foi possível abrir {port}: {e}")

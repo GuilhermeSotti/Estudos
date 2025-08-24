@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+paho-mqtt
+psycopg2-binary
+python-dotenv
+streamlit
+imbalanced-learn
+lightgbm
+sqlalchemy
+dotenv
+psycopg2
+imblearn
+lightgbm
