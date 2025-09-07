@@ -1,0 +1,12 @@
+{
+  "mse": 14974.897426116628,
+  "r2": -0.1651631466280321,
+  "n_train": 937,
+  "n_test": 403,
+  "features": [
+    "vibration",
+    "temperature",
+    "vib_rm5",
+    "temp_rm5"
+  ]
+}

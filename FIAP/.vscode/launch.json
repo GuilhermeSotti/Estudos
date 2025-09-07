@@ -1,16 +1,82 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "Python Debugger: Current File",
+            "name": "debugpy: Run Current File",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "program": "${input:folder}",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "debugpy: MQTT Consumer (Postgres)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/python/mqtt_consumer.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "debugpy: ML Improvements (train)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/python/ml_improvements.py",
+            "args": ["--csv", "${input:folder}/input/simulated_readings.csv", "--out", "${input:folder}/output/model_best.pkl"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "debugpy: RUL Regression (train)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/python/rul_regression.py",
+            "args": ["--csv", "${input:folder}/input/simulated_readings.csv", "--out", "${input:folder}/output/rul_model.pkl"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "debugpy: Streamlit Dashboard",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": ["run", "${input:folder}/python/dashboard_app.py", "--server.port", "8501", "--server.headless", "true"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "debugpy: Run Tests (pytest)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": ["-q"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Dev: Full (SQLite)",
+            "configurations": ["debugpy: MQTT Consumer (SQLite)", "debugpy: Simulate Publisher", "debugpy: Streamlit Dashboard"]
+        },
+        {
+            "name": "Dev: Full (Postgres)",
+            "configurations": ["debugpy: MQTT Consumer (Postgres)", "debugpy: Simulate Publisher", "debugpy: Streamlit Dashboard"]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "folder",
+            "type": "promptString",
+            "description": "Select the project folder",
+            "default": "${workspaceFolder}/Enterprise Challenge - Sprint 3",
         }
     ]
 }
