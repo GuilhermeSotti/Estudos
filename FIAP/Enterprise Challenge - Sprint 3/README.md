@@ -20,6 +20,9 @@
 
 ---
 
+## Video
+Link: [VideoExplicativo](https://youtu.be/-muc-A1wRK8)
+
 ## Objetivo
 Solução completa para manutenção preditiva: coleta via ESP32 → MQTT → PostgreSQL → ML → Dashboard.
 
