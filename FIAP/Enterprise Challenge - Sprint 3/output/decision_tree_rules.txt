@@ -1,4 +1,0 @@
-|--- vibration <= 0.76
-|   |--- class: 0
-|--- vibration >  0.76
-|   |--- class: 1

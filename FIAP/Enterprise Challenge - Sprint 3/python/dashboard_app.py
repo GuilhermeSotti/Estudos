@@ -5,7 +5,6 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import pickle
-from datetime import datetime
 
 st.set_page_config(page_title="PM Dashboard", layout="wide")
 st.title("Manutenção Preditiva — Demo")
@@ -127,7 +126,6 @@ if show_model:
             try:
                 with open(features_json_path, "r") as fh:
                     feature_names = json.load(fh)
-                # valida tipo
                 if not isinstance(feature_names, list):
                     feature_names = None
             except Exception:

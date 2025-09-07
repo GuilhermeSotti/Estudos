@@ -17,7 +17,6 @@ import os
 import json
 import time
 import logging
-import traceback
 import signal
 from threading import Thread, Event
 from queue import Queue, Empty

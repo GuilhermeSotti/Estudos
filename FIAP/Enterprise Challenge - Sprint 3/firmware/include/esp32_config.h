@@ -1,8 +1,8 @@
 #ifndef ESP32_CONFIG_H
 #define ESP32_CONFIG_H
 
-#define WIFI_SSID "YOUR_SSID"
-#define WIFI_PASS "YOUR_PASSWORD"
+#define WIFI_SSID "SSID"
+#define WIFI_PASS "PASSWORD"
 
 #define MQTT_BROKER "192.168.1.100"
 #define MQTT_PORT 1883
