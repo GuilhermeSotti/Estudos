@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: farmtech_api
+    environment:
+      - MODEL_PATH=/app/models/rf_model.joblib
+      - SCALER_PATH=/app/models/scaler.joblib
+      - FLASK_ENV=production
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models
+      - ./src:/app/src
+    depends_on:
+      - mqtt
+    restart: unless-stopped
+
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    container_name: farmtech_mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./deployment/mosquitto/config:/mosquitto/config:ro
+      - ./deployment/mosquitto/data:/mosquitto/data
+      - ./deployment/mosquitto/log:/mosquitto/log
+    restart: unless-stopped
+
+  mqtt-bridge:
+    image: python:3.10-slim
+    container_name: farmtech_mqtt_bridge
+    working_dir: /app
+    volumes:
+      - ./iot:/app/iot
+      - ./src:/app/src
+    command: ["python", "iot/mqtt_bridge.py"]
+    depends_on:
+      - mqtt
+      - api
+    restart: unless-stopped

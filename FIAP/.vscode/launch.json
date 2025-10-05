@@ -11,7 +11,7 @@
             "cwd": "${workspaceFolder}"
         },
         {
-            "name": "debugpy: MQTT Consumer (Postgres)",
+            "name": "[Enterprise Challenge - Sprint 3] MQTT Consumer (Postgres)",
             "type": "debugpy",
             "request": "launch",
             "program": "${input:folder}/python/mqtt_consumer.py",
@@ -21,27 +21,27 @@
             "justMyCode": true
         },
         {
-            "name": "debugpy: ML Improvements (train)",
+            "name": "[Enterprise Challenge - Sprint 3] ML Improvements (train)",
             "type": "debugpy",
             "request": "launch",
             "program": "${input:folder}/python/ml_improvements.py",
-            "args": ["--csv", "${input:folder}/input/simulated_readings.csv", "--out", "${input:folder}/output/model_best.pkl"],
+            "args": ["--csv", "${input:csvFile}", "--out", "${input:outputModel}"],
             "console": "integratedTerminal",
             "envFile": "${workspaceFolder}/.env",
             "cwd": "${workspaceFolder}"
         },
         {
-            "name": "debugpy: RUL Regression (train)",
+            "name": "[Enterprise Challenge - Sprint 3] RUL Regression (train)",
             "type": "debugpy",
             "request": "launch",
             "program": "${input:folder}/python/rul_regression.py",
-            "args": ["--csv", "${input:folder}/input/simulated_readings.csv", "--out", "${input:folder}/output/rul_model.pkl"],
+            "args": ["--csv", "${input:csvFile}", "--out", "${input:outputRulModel}"],
             "console": "integratedTerminal",
             "envFile": "${workspaceFolder}/.env",
             "cwd": "${workspaceFolder}"
         },
         {
-            "name": "debugpy: Streamlit Dashboard",
+            "name": "[Enterprise Challenge - Sprint 3] Streamlit Dashboard",
             "type": "debugpy",
             "request": "launch",
             "module": "streamlit",
@@ -51,7 +51,7 @@
             "cwd": "${workspaceFolder}"
         },
         {
-            "name": "debugpy: Run Tests (pytest)",
+            "name": "Run Tests (pytest)",
             "type": "debugpy",
             "request": "launch",
             "module": "pytest",
@@ -59,6 +59,87 @@
             "console": "integratedTerminal",
             "envFile": "${workspaceFolder}/.env",
             "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "[Enterprise Challenge - Sprint 4] Run HTTP Ingest (Uvicorn)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": ["http_ingest:app", "--reload", "--host", "0.0.0.0", "--port", "8000"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Enterprise Challenge - Sprint 4",
+            "env": {
+                "PG_HOST": "${input:pgHost}",
+                "PG_PORT": "${input:pgPort}",
+                "PG_DB": "${input:pgDb}",
+                "PG_USER": "${input:pgUser}",
+                "PG_PASS": "${input:pgPass}",
+                "MQTT_BROKER": "${input:mqttBroker}"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "[Enterprise Challenge - Sprint 4] Run MQTT Ingest (subscriber)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Enterprise Challenge - Sprint 4/ingest/mqtt_ingest.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Enterprise Challenge - Sprint 4",
+            "env": {
+                "PG_HOST": "${input:pgHost}",
+                "PG_PORT": "${input:pgPort}",
+                "PG_DB": "${input:pgDb}",
+                "PG_USER": "${input:pgUser}",
+                "PG_PASS": "${input:pgPass}",
+                "MQTT_BROKER": "${input:mqttBroker}"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "[Enterprise Challenge - Sprint 4] Run Replay Publisher (utils/replay.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Enterprise Challenge - Sprint 4/utils/replay.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Enterprise Challenge - Sprint 4",
+            "env": {
+                "MQTT_BROKER": "${input:mqttBroker}"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "[Enterprise Challenge - Sprint 4] Train ML (train_eval.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Enterprise Challenge - Sprint 4/ml/train_eval.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Enterprise Challenge - Sprint 4",
+            "env": {
+                "PG_HOST": "${input:pgHost}",
+                "PG_PORT": "${input:pgPort}",
+                "PG_DB": "${input:pgDb}",
+                "PG_USER": "${input:pgUser}",
+                "PG_PASS": "${input:pgPass}"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "[Enterprise Challenge - Sprint 4] Run Dashboard (Streamlit)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": ["run", "dashboard/app.py", "--server.port", "8501", "--server.address", "0.0.0.0"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Enterprise Challenge - Sprint 4",
+            "env": {
+                "PG_HOST": "${input:pgHost}",
+                "PG_PORT": "${input:pgPort}",
+                "PG_DB": "${input:pgDb}",
+                "PG_USER": "${input:pgUser}",
+                "PG_PASS": "${input:pgPass}",
+                "MQTT_BROKER": "${input:mqttBroker}"
+            },
+            "justMyCode": true
         }
     ],
     "compounds": [
@@ -76,7 +157,61 @@
             "id": "folder",
             "type": "promptString",
             "description": "Select the project folder",
-            "default": "${workspaceFolder}/Enterprise Challenge - Sprint 3",
+            "default": "${workspaceFolder}/Enterprise Challenge - Sprint 3"
+        },
+        {
+            "id": "csvFile",
+            "type": "promptString",
+            "description": "Path to the CSV file",
+            "default": "${workspaceFolder}/input/simulated_readings.csv"
+        },
+        {
+            "id": "outputModel",
+            "type": "promptString",
+            "description": "Path to save the best model",
+            "default": "${workspaceFolder}/output/model_best.pkl"
+        },
+        {
+            "id": "outputRulModel",
+            "type": "promptString",
+            "description": "Path to save the RUL model",
+            "default": "${workspaceFolder}/output/rul_model.pkl"
+        },
+        {
+            "id": "pgHost",
+            "type": "promptString",
+            "description": "Postgres Host",
+            "default": "localhost"
+        },
+        {
+            "id": "pgPort",
+            "type": "promptString",
+            "description": "Postgres Port",
+            "default": "5432"
+        },
+        {
+            "id": "pgDb",
+            "type": "promptString",
+            "description": "Postgres Database",
+            "default": "factorydb"
+        },
+        {
+            "id": "pgUser",
+            "type": "promptString",
+            "description": "Postgres User",
+            "default": "postgres"
+        },
+        {
+            "id": "pgPass",
+            "type": "promptString",
+            "description": "Postgres Password",
+            "default": "postgres"
+        },
+        {
+            "id": "mqttBroker",
+            "type": "promptString",
+            "description": "MQTT Broker Address",
+            "default": "localhost"
         }
     ]
 }

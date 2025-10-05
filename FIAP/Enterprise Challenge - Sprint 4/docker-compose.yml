@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: fh_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: factorydb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    container_name: fh_mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4:7
+    container_name: fh_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+
+  ingest-http:
+    build: .
+    container_name: fh_http_ingest
+    command: uvicorn http_ingest:app --host 0.0.0.0 --port 8000
+    depends_on:
+      - postgres
+    environment:
+      PG_HOST: postgres
+      PG_PORT: 5432
+      PG_DB: factorydb
+      PG_USER: postgres
+      PG_PASS: postgres
+    ports:
+      - "8000:8000"
+
+volumes:
+  pgdata:
