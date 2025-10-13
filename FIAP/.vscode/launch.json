@@ -140,6 +140,37 @@
                 "MQTT_BROKER": "${input:mqttBroker}"
             },
             "justMyCode": true
+        },
+        {
+            "name": "[Cap 1 - Despertar da rede neural] Prepare Dataset (from zips)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/src/prepare_dataset_from_zips.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${input:folder}",
+            "justMyCode": true
+        },
+        {
+            "name": "[Cap 1 - Despertar da rede neural] Train CNN (train_cnn.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/src/train_cnn.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${input:folder}",
+            "justMyCode": true
+        },
+        {
+            "name": "[Cap 1 - Despertar da rede neural] Train YOLO (train_yolo.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${input:folder}/src/train_yolo.py",
+            "args": ["--epochs1", "30", "--epochs2", "60", "--img", "640", "--batch", "8"],
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${input:folder}",
+            "justMyCode": true
         }
     ],
     "compounds": [
@@ -157,7 +188,7 @@
             "id": "folder",
             "type": "promptString",
             "description": "Select the project folder",
-            "default": "${workspaceFolder}/Enterprise Challenge - Sprint 3"
+            "default": "${workspaceFolder}/Cap 1 - Despertar da rede neural"
         },
         {
             "id": "csvFile",

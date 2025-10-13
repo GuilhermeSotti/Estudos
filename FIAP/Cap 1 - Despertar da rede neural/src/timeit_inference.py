@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 timeit_inference.py
 - Mede tempo médio de inferência (ms) e FPS estimado
@@ -24,14 +23,13 @@ def measure_cnn_inference(model, dataloader, n=100, device='cuda'):
     times = np.array(times)
     return times.mean(), times.std()
 
-# Para YOLO (exemplo com ultralytics)
 def measure_yolo_inference(yolo_model, images_list, n=100):
     import time
     times = []
     for i in range(n):
         img = images_list[i % len(images_list)]
         t0 = time.time()
-        _ = yolo_model(img)  # ultralytics predict
+        _ = yolo_model(img)
         t1 = time.time()
         times.append((t1-t0)*1000)
     return np.mean(times), np.std(times)

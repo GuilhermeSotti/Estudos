@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 label_converter.py
 - Valida e converte labels para formato YOLO (se necessário).
@@ -19,6 +18,3 @@ def check_yolo_label(lbl_path: Path, img_w: int, img_h: int):
                 raise ValueError(f"Valores não-normalizados em {lbl_path}")
             lines.append(line)
     return lines
-
-if __name__ == "__main__":
-    print("Uso: chame este script para validar labels em train/labels/")

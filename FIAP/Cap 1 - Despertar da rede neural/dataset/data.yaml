@@ -1,0 +1,6 @@
+train: C:/Projetos/Estudos/FIAP/Cap 1 - Despertar da rede neural/dataset/train
+val: C:/Projetos/Estudos/FIAP/Cap 1 - Despertar da rede neural/dataset/val
+test: C:/Projetos/Estudos/FIAP/Cap 1 - Despertar da rede neural/dataset/test
+
+nc: 2
+names: ['vaca', 'cerca']

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 eval_metrics.py
 - Avalia classificadores (CNN) e gera CSV com precision/recall/f1/matriz_confusao
@@ -21,7 +20,6 @@ def evaluate_classification(y_true, y_pred, labels):
     return df, acc, cm
 
 if __name__ == "__main__":
-    # exemplo de uso
     y_true = [0,0,1,1,0,1]
     y_pred = [0,1,1,1,0,1]
     df, acc, cm = evaluate_classification(y_true, y_pred, labels=[0,1])
