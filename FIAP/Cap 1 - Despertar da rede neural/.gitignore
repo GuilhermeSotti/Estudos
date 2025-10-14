@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+/data/
+*.pth
+*.pt
+runs/
+results/
+drive/
+.env
+.DS_Store
