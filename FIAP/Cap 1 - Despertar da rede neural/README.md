@@ -44,7 +44,7 @@ Desenvolver, treinar e comparar abordagens de visão computacional:
 2. Monte o Google Drive (o notebook tem uma célula automatizada).
 3. Instale dependências via pip (célula pronta).
 4. Execute células na ordem: preparação -> upload dataset -> rotulagem (instruções) -> treino YOLO (30 e 60 epochs) -> treino CNN -> avaliação.
-5. Resultados serão salvos em `/content/drive/MyDrive/FarmTech_Fase6/Cap1_Despertar_RedeNeural/results/`.
+5. Resultados serão salvos em `FIAP/Cap1_Despertar_RedeNeural/results/`.
 
 ## Como reproduzir localmente
 1. Clone o repo.
