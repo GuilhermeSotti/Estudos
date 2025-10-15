@@ -1,6 +1,27 @@
-# Cap1_Despertar_RedeNeural
+# FIAP - Faculdade de Informática e Administração Paulista
 
-Repositório para a **Fase 6 — Capítulo 1: Despertar da Rede Neural** do projeto FarmTech Solutions.
+<p align="center">
+  <a href="https://www.fiap.com.br/">
+    <img src="../assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Administração Paulista" width="40%" />
+  </a>
+</p>
+
+# Fase 6 — Capítulo 1: Despertar da Rede Neural
+
+## Nome do grupo: --
+
+## Integrantes
+- [Guilherme Pires de Sotti Machado](https://www.linkedin.com/in/guilherme-pires-de-sotti-machado-296a7417a/)
+
+## Professores
+
+### Tutor(a)
+- [Lucas Gomes Moreira](https://www.linkedin.com/in/lucas-gomes-moreira-15a8452a/)
+
+---
+
+## Video
+Link: [VideoExplicativo](https://youtu.be/-muc-A1wRK8)
 
 ## Objetivo
 Desenvolver, treinar e comparar abordagens de visão computacional:
@@ -31,10 +52,15 @@ Desenvolver, treinar e comparar abordagens de visão computacional:
 3. Ajuste paths em `src/config.yaml` (ou edite variáveis nos scripts).
 4. Rode `python src/data_prep.py` etc. (exemplos nas instruções abaixo e no notebook).
 
-## Notas importantes
-- Seeds fixos: `seed=42` (documentado nos scripts).
-- Rotulagem: Use MakeSense.ai exportando em formato YOLO e salvar em `dataset/train/labels/`.
-- Entrega final: report.pdf em `/report/report.pdf` e roteiro em `/video/video_script.txt`.
 
-## Contato
-Guilherme Pires de Sotti Machado — mantenha issues no GitHub para dúvidas.
+---
+
+📋 **Licença**
+
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" width="22px" style="vertical-align:text-bottom; margin-right:2px;" /> <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" width="22px" style="vertical-align:text-bottom;" />  
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a property="dct:title" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por 
+<a property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sob 
+<a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Attribution 4.0 International</a>.
+</p>
+      
