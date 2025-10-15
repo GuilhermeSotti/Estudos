@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 data_prep.py
 - Organiza imagens em train/val/test splits
@@ -14,7 +13,7 @@ SEED = 42
 random.seed(SEED)
 
 ROOT_DRIVE = Path("/content/drive/MyDrive/FarmTech_Fase6/Cap1_Despertar_RedeNeural/dataset")
-SOURCE_DIR = Path("/content/source_images")  # onde você coloca as imagens iniciais antes de organizar
+SOURCE_DIR = Path("/content/source_images")
 CLASSES = {"vaca": "vaca", "cerca": "cerca"}
 
 def create_structure(root: Path):

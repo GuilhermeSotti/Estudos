@@ -21,7 +21,7 @@
 ---
 
 ## Video
-Link: [VideoExplicativo](https://youtu.be/-muc-A1wRK8)
+Link: [VideoExplicativo](https://youtu.be/QgQF-Qi18eU)
 
 ## Objetivo
 Desenvolver, treinar e comparar abordagens de visão computacional:
