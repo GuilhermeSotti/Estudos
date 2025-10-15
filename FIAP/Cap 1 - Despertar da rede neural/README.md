@@ -29,7 +29,7 @@ Desenvolver, treinar e comparar abordagens de visão computacional:
 - Classificação: CNN treinada do zero
 
 ## Estrutura
-- `notebooks/` — notebook Colab principal (executável).
+- `notebooks/` — notebook principal (executável).
 - `src/` — scripts de preparação, treino e avaliação.
 - `dataset/` — manifesto e instruções para o Google Drive.
 - `results/` — métricas, artfatos e imagens de teste.
@@ -39,9 +39,9 @@ Desenvolver, treinar e comparar abordagens de visão computacional:
 - GPU (Colab GPU recomendada — Tesla T4/P100/V100)
 - Ver `requirements.txt` para versões exatas.
 
-## Como reproduzir (Colab — passo a passo)
-1. Abra `notebooks/01_train_yolo_cnn_colab.ipynb` no Colab.
-2. Monte o Google Drive (o notebook tem uma célula automatizada).
+## Como reproduzir (passo a passo)
+1. Abra `notebooks/01_train_yolo_cnn_colab.ipynb`.
+2. Anexe o .zip com imagens para ser analisado na pasta `raw`.
 3. Instale dependências via pip (célula pronta).
 4. Execute células na ordem: preparação -> upload dataset -> rotulagem (instruções) -> treino YOLO (30 e 60 epochs) -> treino CNN -> avaliação.
 5. Resultados serão salvos em `FIAP/Cap1_Despertar_RedeNeural/results/`.
